@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Dependencies/Setup
 
-> Load any packages or other pre-processing steps that are necessary to make your function work in the chunk below.
+> Load any packages or other pre-processing steps that are necessary to make your function work in the chunk below. The chunk should be as [parsimonious](https://en.wiktionary.org/wiki/parsimonious) as possible.
 
 ```{r load, message=FALSE}
 library(tidyverse)
@@ -32,16 +32,19 @@ library(tidyverse)
 
 > List the arguments your function takes. Specify the data type, default value (if applicable), and any other assumptions you are making about the value of each argument. 
 
+- `x`: a numeric vector
+
 ### Result
 
 > What does your function return? Specify the data type and any other assumptions you are making. 
 
+- a numeric vector of the squared values of the input vector `x`. 
+
 ## Code
 
-Paste your code in the chunk below. 
+> Paste your code in the chunk below. 
 
 ```{r code}
-# delete this!!
 square <- function(x) {
   x ^2
 }
