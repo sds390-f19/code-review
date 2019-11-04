@@ -1,0 +1,78 @@
+---
+title: "Div II Project"
+author: "Put your name here"
+date: "November 20, 2019"
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Metadata
+
+### Purpose
+
+> What is the purpose of your function? What problem does it solve? When would you use it? 
+
+### Dependencies/Setup
+
+> Load any packages or other pre-processing steps that are necessary to make your function work in the chunk below. The chunk should be as [parsimonious](https://en.wiktionary.org/wiki/parsimonious) as possible.
+
+```{r load, message=FALSE}
+library(tidyverse)
+```
+
+
+### Arguments
+
+> List the arguments your function takes. Specify the data type, default value (if applicable), and any other assumptions you are making about the value of each argument. 
+
+- `x`: a numeric vector
+
+### Result
+
+> What does your function return? Specify the data type and any other assumptions you are making. 
+
+- a numeric vector of the squared values of the input vector `x`. 
+
+## Code
+
+> Paste your code in the chunk below. 
+
+```{r code}
+square <- function(x) {
+  x^2
+}
+```
+
+## Examples
+
+> Give 2-3 examples of typical usage of your function. Describe in words what is being illustrated.
+
+This shows the first 10 perfect squares. 
+
+```{r ex1}
+square(1:10)
+```
+
+## Testing
+
+> Provide a few examples of outputs that you expect your function will match, given a specific input. [Best if you use the [`testthat` package](https://github.com/r-lib/testthat).] 
+
+```{r tests, message=FALSE}
+square(0) == 0^2
+square(10) == 10^2
+square(-1) == square(1)
+
+# using testthat
+library(testthat)
+expect_equal(square(0), 0^2)
+expect_equal(square(10), 10^2)
+expect_equal(square(-1), square(1))
+```
+
