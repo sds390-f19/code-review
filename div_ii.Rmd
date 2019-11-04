@@ -43,6 +43,8 @@ library(tidyverse)
 ## Code
 
 > Paste your code in the chunk below. 
+>
+> **Alternatively**, if your code is already in a package, you may also show the code from source using the double- colon operator and omitting the parentheses (e.g., `base::mean`). This will only work if the package is installed, so be sure to lists the correct dependencies above. 
 
 ```{r code}
 square <- function(x) {
